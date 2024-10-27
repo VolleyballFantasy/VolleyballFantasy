@@ -39,7 +39,12 @@
         // Log out function
         async function logout() {
             try {
-                const response = await fetch('/logout', { method: 'POST' });
+                const response = await fetch('/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
                 if (response.ok) {
                     window.location.href = 'index.html'; // Redirect to login page after logging out
                 } else {
