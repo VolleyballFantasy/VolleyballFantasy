@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Connect to MongoDB (adjust connection string as needed)
-mongoose.connect('mongodb://localhost:27017/volleyballFantasyApp', {
+mongoose.connect('mongodb://localhost:5000/volleyballFantasyApp', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="#draft-list" onclick="loadDraftList()">Draft List</a>
+            <a href="#tournament" onclick="loadTournament()">Tournament</a>
+        </div>
+        <button class="logout-btn" onclick="logout()">Log Out</button>
+    </div>
+
+    <!-- Main content area -->
+    <div class="content" id="content">
+        <h2>Welcome to the Admin Dashboard</h2>
+        <p>Select an option from the navigation bar to get started.</p>
+    </div>
+
+    <script>
+        // Function to load the draft list (example)
+        function loadDraftList() {
+            document.getElementById('content').innerHTML = '<h2>Draft List</h2><p>Here you can view and edit the draft list of players.</p>';
+            // Add any specific draft list content or fetch the draft list data from the server here
+        }
+
+        // Function to load the tournament page (example)
+        function loadTournament() {
+            document.getElementById('content').innerHTML = '<h2>Tournament</h2><p>Here you can view and edit the tournament details.</p>';
+            // Add any specific tournament content or fetch the tournament data from the server here
+        }
+
+        // Log out function
+        async function logout() {
+            try {
+                const response = await fetch('/logout', { method: 'POST' });
+                if (response.ok) {
+                    window.location.href = 'index.html'; // Redirect to login page after logging out
+                } else {
+                    alert('Failed to log out');
+                }
+            } catch (error) {
+                alert('Error logging out');
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -46,3 +46,45 @@ body {
     display: block;
     margin-top: 10px;
 }
+
+        /* Basic styling for the navbar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1em;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 1em;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        .logout-btn {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            background-color: #d62828;
+        }
+
+        .content {
+            padding: 2em;
+        }
+    
