@@ -115,3 +115,9 @@ app.get('/draft-list', authenticate, authorizeAdmin, async (req, res) => {
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+const cors = require('cors');
+app.use(cors({
+    origin: 'http://localhost:3000', // Adjust to your client URL
+    credentials: true
+}));
